@@ -1,0 +1,100 @@
+// lazy loading
+// this does not affect background images - it's actually good cuz we want the transition to look good
+const assets = document.querySelectorAll("img, video, audio"); // iframe
+for (let i = 0; i < assets.length; i++) {
+  assets[i].setAttribute("loading", "lazy");
+
+  assets[i].setAttribute("data-src",
+    assets[i].getAttribute("s")
+  );
+}
+
+const fragments = document.querySelectorAll(
+  "img:not(.fallback), video, iframe, li, span, .f" // even ul:not(ul ul) isn't ideal
+);
+for (let i = 0; i < fragments.length; i++) {
+  fragments[i].classList.add("fragment");
+}
+
+// const appendix = document.getElementById("appendix").getElementsByTagName("section");
+const appendix = document.querySelectorAll("#appendix section");
+for (let i = 0; i < appendix.length; i++) {
+  appendix[i].setAttribute("data-visibility", "uncounted");
+}
+
+const notes = document.getElementsByTagName("aside");
+for (let i = 0; i < notes.length; i++) {
+  notes[i].classList.add("notes");
+  notes[i].setAttribute("data-markdown", "");
+}
+
+const stack = document.getElementsByClassName("rs");
+for (let i = 0; i < stack.length; i++) {
+  stack[i].classList.add("r-stack");
+}
+
+// in order to use mermaid code, i just say .mermaid at the place of the code
+const mermaid = document.getElementsByClassName("mermaid");
+for (let i = 0; i < mermaid.length;) { // no updation - this works cuz the last element is removed
+  const slide = mermaid[i].parentElement.classList;
+  slide.add("diagram-slide");
+
+  const display = document.createElement("div");
+  display.classList.add("diagram-display"); // , "fragment"
+  mermaid[i].parentNode.appendChild(display);
+
+  const data = mermaid[i].classList;
+  data.add("diagram-data");
+  data.remove("mermaid");
+}
+
+// renaming
+const section = document.getElementsByTagName("section");
+for (let i = 0; i < section.length; i++) 
+{
+
+  if(! section[i].classList.contains("cover") )
+    section[i].setAttribute("data-background-size", "contain");
+
+  // menu name
+  const name = section[i].getAttribute("menu");
+  if (name != null)
+    section[i].setAttribute("data-menu-title", name);
+
+  const color = section[i].getAttribute("color")
+  if(color != null)
+    section[i].setAttribute("data-background-color", color)
+
+  // img
+  const img = section[i].getAttribute("img");
+  if (img != null)
+    section[i].setAttribute("data-background-image", img);
+
+  // video
+  const vid = section[i].getAttribute("vid");
+  if (vid != null)
+    section[i].setAttribute("data-background-video", vid);
+
+  // iframe
+  const iframe = section[i].getAttribute("iframe");
+  if (iframe != null)
+  {
+    const fallbackLink = section[i].getAttribute("fallback")
+
+    // remote embed
+    if(iframe.includes("http")) 
+    {
+      if(fallbackLink == null)
+        alert("Iframe Fallback missing on section: " + (i+1) )
+      else if(navigator.onLine)
+        section[i].setAttribute("data-background-iframe", iframe);
+      else
+        section[i].setAttribute("data-background-image", fallbackLink);
+    }
+    else
+    {
+      // local embed
+      section[i].setAttribute("data-background-iframe", iframe);
+    }
+  }
+}
