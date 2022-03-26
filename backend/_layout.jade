@@ -136,12 +136,12 @@ html
 				//-     Reveal.registerPlugin( RevealPointer )
 				//- })
 				
-				if(document.querySelector(".mermaid") != null)
+				if(document.querySelector(".diagram-data") != null)
 				{
 					const k = "#{customPlugin}" + 'mermaid/mermaid.'
+					loadScript( k + 'js' )
 					loadStyle( k + 'css')
 					loadScript( k + 'full.js' )
-					loadScript( k + 'js' )
 				}
 
 

@@ -36,18 +36,19 @@ for (let i = 0; i < stack.length; i++) {
 }
 
 // in order to use mermaid code, i just say .mermaid at the place of the code
-const mermaid = document.getElementsByClassName("mermaid");
-for (let i = 0; i < mermaid.length;) { // no updation - this works cuz the last element is removed
-  const slide = mermaid[i].parentElement.classList;
+const mer = document.getElementsByClassName("mermaid");
+for (let i = 0; i < mer.length;) { // no updation - this works cuz the last element is removed
+  const slide = mer[i].parentElement.classList;
   slide.add("diagram-slide");
 
   const display = document.createElement("div");
   display.classList.add("diagram-display"); // , "fragment"
-  mermaid[i].parentNode.appendChild(display);
+  display.classList.add("fragment");
+  mer[i].parentNode.appendChild(display);
 
-  const data = mermaid[i].classList;
-  data.add("diagram-data");
-  data.remove("mermaid");
+  const data = mer[i];
+  data.classList.add("diagram-data");
+  data.classList.remove("mermaid");
 }
 
 // renaming

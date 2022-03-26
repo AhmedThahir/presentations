@@ -56,8 +56,8 @@
           </section>
           <section>
             <h1>Objective</h1>
-            <ul>The goal is
-              <li><b>not</b> to formulate a method for prediction</li>
+            <ul class="f">The goal is to formulate a method
+              <li><b>not</b> for prediction</li>
               <li>but rather <span>to determine what truly <mark>produces</mark> effective outcomes</span></li>
             </ul>
           </section>
@@ -91,7 +91,7 @@
           </section>
         </section>
         <section>
-          <section class="cover" img=".jpg">
+          <section class="cover" img="work.jpg">
             <h1>Practical Work</h1>
           </section>
           <section menu="Jupyter" iframe="01.html"></section>
@@ -112,10 +112,7 @@
           </aside>
         </section>
         <section id="appendix">
-          <section class="cover" img="work.jpg">
-            <h1>Appendix</h1>
-            <aside>It seems unfair to solely focus on China, when so many other countries are doing the same</aside>
-          </section>
+          <h1>Appendix</h1>
         </section>
       </div>
     </div>
@@ -200,12 +197,12 @@
       	//-     Reveal.registerPlugin( RevealPointer )
       	//- })
       	
-      	if(document.querySelector(".mermaid") != null)
+      	if(document.querySelector(".diagram-data") != null)
       	{
       		const k = "../../backend/plugins/" + 'mermaid/mermaid.'
+      		loadScript( k + 'js' )
       		loadStyle( k + 'css')
       		loadScript( k + 'full.js' )
-      		loadScript( k + 'js' )
       	}
       
       
