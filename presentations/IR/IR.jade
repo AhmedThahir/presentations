@@ -1,10 +1,11 @@
-extends ../../backend/layout.jade
+extends ../../backend/_layout.jade
+
 block title
   h1.f Threat of China's Rise
 
 block content
   section
-    section.cover(img="assets/neon.jpg")
+    section.cover(img="neon.jpg")
       h1 Introduction
       aside.
         1. China was under crippling poverty a few decades ago
@@ -18,15 +19,15 @@ block content
         li Solutions
 
   section
-    section.cover(img="assets/wallOfChina.jpg")
+    section.cover(img="wallOfChina.jpg")
       h1 Discussion
     section
       h1 Human Rights
       .rs
-        img(s="assets/hongKongProtests.jpg")
-        img(s="assets/concentrationCamp1.jpg")
-        img(s="assets/concentrationCamp2.jpg")
-        img(s="assets/laborExploitation.jpg")
+        img(s="hongKongProtests.jpg")
+        img(s="concentrationCamp1.jpg")
+        img(s="concentrationCamp2.jpg")
+        img(s="laborExploitation.jpg")
       aside.
         China has been very notorious for its human rights abuse. 
 
@@ -41,7 +42,7 @@ block content
 
     section(menu="Graph - China Refugee" 
       iframe="https://ourworldindata.org/grapher/refugee-population-by-country-or-territory-of-origin?tab=chart&time=1991..2020&country=~CHN"
-      fallback="assets/fallback/refugeeOriginGraph.svg")
+      fallback="fallback/refugeeOriginGraph.svg")
       aside.
         1. refugees seeking asylum **from** China
         1. play animation
@@ -51,11 +52,11 @@ block content
     
     section(menu="Map - China Refugee"
       iframe="https://ourworldindata.org/grapher/refugee-population-by-country-or-territory-of-origin?country=~CHN"
-      fallback="assets/fallback/refugeeOrigin.svg")
+      fallback="fallback/refugeeOrigin.svg")
 
     section(menu="Map - Refugee Destination"
       iframe="https://ourworldindata.org/grapher/refugee-population-by-country-or-territory-of-asylum?time=2020"
-      fallback="assets/fallback/refugeeDestination.svg")
+      fallback="fallback/refugeeDestination.svg")
       aside.
         1. Refugee population across the world
         1. Show > 1 million back and front
@@ -68,7 +69,7 @@ block content
     section
       h1 International Waters
       .rs
-        img(s="assets/chinaSea.png")
+        img(s="chinaSea.png")
       aside.
         1. China builds artificial islands and sets up military bases in the South China Sea. China insists that its intentions are non-militaristic, but its actions say otherwise
         1. China does this in order to extract the natural resources of those regions and to simultaneously prevent other countries from doing so. Moreover, they avail more efficient trading routes.
@@ -77,8 +78,8 @@ block content
     section
       h1 Investment & Debt
       .rs
-        img(s="assets/Hambantota.jpg")
-        img(s="assets/africa.png")
+        img(s="Hambantota.jpg")
+        img(s="africa.png")
       aside.
         as the Japanese guest lecturer said, China is doing a lot of propaganda
 
@@ -92,7 +93,7 @@ block content
     section
       h1 Biowarfare
       .rs
-        img(s="assets/wuhan.jpg")
+        img(s="wuhan.jpg")
       aside.
         1. It seems very suspicious that the origin of the virus was from Wuhan, the same place where there is a research center for virology(Wuhan Institute of Virology).
         1. Moreover, the fact that China hid the news of the outbreak supports the theory even further.
@@ -102,18 +103,18 @@ block content
     
     section(menu="Graph - Economic Decline"
       iframe="https://ourworldindata.org/grapher/economic-decline-in-the-second-quarter-of-2020?country=CHN~USA~JPN~GBR"
-      fallback="assets/fallback/economicDecline1.svg")
+      fallback="fallback/economicDecline1.svg")
       aside.
         Recent Economic decline after Covid
     section(menu="Graph - Economic Decline"
       iframe="https://ourworldindata.org/grapher/economic-decline-in-the-second-quarter-of-2020?country=CHN~USA~JPN~GBR~AUT~BGR~BEL~CAN~CHL~COL~CYP~CZE~DNK~EU~Euro+area~FIN~G7~FRA~DEU~HUN~IDN~ISR~ITA~LVA~TUN~TWN~SWE~ESP~KOR~SVK~ROU~SGP~PRT~POL~PER~PHL~OECD+-+Total~NOR~NGA~NLD~NAFTA~MEX~MYS~LTU"
-      fallback="assets/fallback/economicDecline2.svg")
+      fallback="fallback/economicDecline2.svg")
     section
       h1 Cyberspace
       .rs
-        img(s="assets/cyberAttacks1.jpg")
-        img(s="assets/cyberAttacks2.jpg")
-        img(s="assets/cyberAttacks3.jpg")
+        img(s="cyberAttacks1.jpg")
+        img(s="cyberAttacks2.jpg")
+        img(s="cyberAttacks3.jpg")
       aside.
         cyber warfare is a relatively cheap mode of warfare
 
@@ -125,7 +126,7 @@ block content
         1. African Union spying
 
   section
-    section.cover(img="assets/hongKong.jpg")
+    section.cover(img="hongKong.jpg")
       h1 Conclusions
     section
       h1 Scenario
@@ -159,14 +160,14 @@ block content
         1. International companies should find alternative countries to produce their goods. It may not be easy, but it is necessary to reduce the current dependence on China.
 
 block appendix
-  section.cover(img="assets/buildings.jpg")
+  section.cover(img="buildings.jpg")
     h1 Appendix
     aside.
       It seems unfair to solely focus on China, when so many other countries are doing the same
 
   section(menu="Graph - Poverty in China"
     iframe="https://ourworldindata.org/grapher/share-of-population-in-extreme-poverty?tab=chart&time=1981..2019&country=~CHN"
-    fallback="assets/fallback/poverty.svg")
+    fallback="fallback/poverty.svg")
     aside.
       1. Proportion of Chinese population in extreme poverty
       1. play animation
@@ -175,7 +176,7 @@ block appendix
 
   section(menu="Graph - Africa GDP"
     iframe="https://ourworldindata.org/grapher/gdp-world-regions-stacked-area?time=2011..latest&country=~Sub-Sahara+Africa"
-    fallback="assets/fallback/africaGDP.svg")
+    fallback="fallback/africaGDP.svg")
     aside.
       Growth in GDP of Sub-Saharan Africa
 

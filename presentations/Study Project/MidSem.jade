@@ -1,11 +1,68 @@
 extends ../../backend/_layout.jade
 
+block title
+	h1.f Sports Analytics
+
 block content
-  section(menu="Jupyter"
-          iframe="assets/01.html")
-      aside.
-        1. refugees seeking asylum **from** China
-        1. play animation
-        1. This doesn't even include all the tortured Uyghur muslims, which are reported to be in millions
-        1. switch to map
-        1. click progress bar for focus
+	section
+		section.cover(img="journey.jpg")
+			h1 Journey
+			aside.
+		section(img="sport360.jpg", menu = "Picture")
+		section
+			h1 Why?
+
+	section
+		section.cover(img="intro.jpg")
+			h1 Introduction
+			aside.
+	section
+		h1 Sports Analytics
+		.rs
+			img(s="flowchart.svg") 
+				//- s[/Data/] --> Analysis --> i[/Insights/] -.-> s
+			img(s="venn.svg")
+	
+	section
+		section.cover(img = "research.jpg")
+			h1 My Research
+		section
+			h1 Objective
+			ul The goal is
+				li <b>not</b> to formulate a method for prediction
+				li but rather 
+					span to determine what truly <mark>produces</mark> effective outcomes
+		section
+			h1 Proposed Method
+			ul
+				li Concept of Causality
+				li Economic Principles <span>- Inflation</span>
+		section
+			h1 Literature Gaps
+			ul
+				li
+
+	section
+		section.cover(img=".jpg")
+			h1 Literature Review
+		section
+			h1 Statistical
+			section
+				ul
+					li Correlation $\ne$ Causation
+					li Causal Mechanism Learning
+				aside.
+					Causal Mechanism Learning is necessary to deeply provide
+	section
+		section.cover(img=".jpg")
+			h1 Practical Work
+		section(menu="Jupyter"
+						iframe="01.html")
+		section(menu="Jupyter"
+						iframe="02.html")
+
+block appendix
+	section.cover(img="work.jpg")
+		h1 Appendix
+		aside.
+			It seems unfair to solely focus on China, when so many other countries are doing the same

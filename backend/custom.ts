@@ -1,3 +1,5 @@
+const assetLoc:string = "assets/";
+
 // lazy loading
 // this does not affect background images - it's actually good cuz we want the transition to look good
 const assets = document.querySelectorAll("img, video, audio"); // iframe
@@ -5,7 +7,7 @@ for (let i = 0; i < assets.length; i++) {
   assets[i].setAttribute("loading", "lazy");
 
   assets[i].setAttribute("data-src",
-    assets[i].getAttribute("s")
+    assetLoc + assets[i].getAttribute("s")
   );
 }
 
@@ -68,12 +70,12 @@ for (let i = 0; i < section.length; i++)
   // img
   const img = section[i].getAttribute("img");
   if (img != null)
-    section[i].setAttribute("data-background-image", img);
+    section[i].setAttribute("data-background-image", assetLoc + img);
 
   // video
   const vid = section[i].getAttribute("vid");
   if (vid != null)
-    section[i].setAttribute("data-background-video", vid);
+    section[i].setAttribute("data-background-video", assetLoc + vid);
 
   // iframe
   const iframe = section[i].getAttribute("iframe");
@@ -81,20 +83,18 @@ for (let i = 0; i < section.length; i++)
   {
     const fallbackLink = section[i].getAttribute("fallback")
 
-    // remote embed
-    if(iframe.includes("http")) 
+    if(iframe.includes("http")) // remote embed
     {
       if(fallbackLink == null)
         alert("Iframe Fallback missing on section: " + (i+1) )
       else if(navigator.onLine)
         section[i].setAttribute("data-background-iframe", iframe);
       else
-        section[i].setAttribute("data-background-image", fallbackLink);
+        section[i].setAttribute("data-background-image", assetLoc + fallbackLink);
     }
-    else
+    else // local embed
     {
-      // local embed
-      section[i].setAttribute("data-background-iframe", iframe);
+      section[i].setAttribute("data-background-iframe", assetLoc + iframe);
     }
   }
 }
