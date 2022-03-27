@@ -11,13 +11,6 @@ for (let i = 0; i < assets.length; i++) {
   );
 }
 
-const fragments = document.querySelectorAll(
-  "img:not(.fallback), video, iframe, li, span, .f" // even ul:not(ul ul) isn't ideal
-);
-for (let i = 0; i < fragments.length; i++) {
-  fragments[i].classList.add("fragment");
-}
-
 // const appendix = document.getElementById("appendix").getElementsByTagName("section");
 const appendix = document.querySelectorAll("#appendix section");
 for (let i = 0; i < appendix.length; i++) {
@@ -29,6 +22,12 @@ for (let i = 0; i < notes.length; i++) {
   notes[i].classList.add("notes");
   notes[i].setAttribute("data-markdown", "");
 }
+
+const tables = document.getElementsByTagName("tab");
+for (let i = 0; i < tables.length; i++) {
+  tables[i].setAttribute("data-markdown", "");
+}
+
 
 const stack = document.getElementsByClassName("rs");
 for (let i = 0; i < stack.length; i++) {
@@ -98,4 +97,13 @@ for (let i = 0; i < section.length; i++)
       section[i].setAttribute("data-background-iframe", assetLoc + iframe);
     }
   }
+}
+
+
+const fragments = document.querySelectorAll(
+  "img:not(.fallback), video, iframe, li, span, .f, table, td, th:not(:first-child)"
+  // even ul:not(ul ul) isn't ideal
+);
+for (let i = 0; i < fragments.length; i++) {
+  fragments[i].classList.add("fragment");
 }

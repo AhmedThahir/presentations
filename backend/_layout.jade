@@ -60,7 +60,6 @@ html
 		script.
 			Reveal.initialize({
 				hash: true,
-				
 				controls: true, // hide the arrows
 				
 				//- viewDistance: 2, // it seems bad, but while actually presenting, this is the most stable, because i will take time bw slides anyways
@@ -70,6 +69,10 @@ html
 
 				overview: false, // i don't really use it; why waste resources
 				center: false,
+				
+				width: 1000,
+				//- height: 1080,
+				//- margin: 0,
 
 				katex: {
 					local: '#{backend}' + 'node/node_modules/katex',

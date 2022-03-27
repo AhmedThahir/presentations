@@ -1,138 +1,146 @@
 // make everything in terms of em
-  
+	
 @font-face
-  font-family: 'Montserrat'
-  src: url('../../backend/fonts/Montserrat/Montserrat.ttf') format("truetype")
+	font-family: 'Montserrat'
+	src: url('../../backend/fonts/Montserrat/Montserrat.ttf') format("truetype")
 
 *
-  text-transform: initial !important
+	text-transform: initial !important
 
 section
-  text-align: left
-  font-family: "Montserrat"
+	text-align: left
+	font-family: "Montserrat"
 .reveal
-  .slide-background-content[style^="background-image"]
-    filter: contrast(115%) saturate(125%) brightness(50%) // blur(3px) // order matters
-  h1
-    font-size: 2em
-    font-family: "Montserrat"
-    text-align: center
-  h2
-    font-family: "Montserrat" 
-  ul,
-  ol
-    margin-left: 0
-  ul+ul,
-  ul+ol,
-  ol+ol,
-  ol+ul
-    margin-top: 0.5em
-  li
-    margin-left: 1em
-  img,
-  video,
-  iframe
-    height: 13em
-    max-height: 13em
-    margin: auto
-    object-fit: contain
-    width: 100%
-    max-width: 100%
-    &.fragment.visible:not(.current-fragment):not(.fragment:last-child)
-      opacity: 0
-    
+	.slide-background-content[style^="background-image"]
+		filter: contrast(115%) saturate(125%) brightness(50%) // blur(3px) // order matters
+	h1
+		font-size: 2em
+		font-family: "Montserrat"
+		text-align: center
+	h2
+		font-family: "Montserrat" 
+	ul,
+	ol
+		margin-left: 0
+	ul+ul,
+	ul+ol,
+	ol+ol,
+	ol+ul
+		margin-top: 0.5em
+	li
+		margin-left: 1em
+	img,
+	video,
+	iframe
+		height: 13em
+		max-height: 13em
+		margin: auto
+		object-fit: contain
+		width: 100%
+		max-width: 100%
+		&.fragment.visible:not(.current-fragment):not(.fragment:last-child)
+			opacity: 0
+		
 .slide-number
-  right: 3vh !important
-  bottom: 3vh !important
-  font-size: 3vh !important
-  font-family: Montserrat !important
+	right: 3vh !important
+	bottom: 3vh !important
+	font-size: 3vh !important
+	font-family: Montserrat !important
 
 .progress
-  min-height: 1.5vh !important
+	min-height: 1.5vh !important
 
 .start,
 .end,
 .cover
-  height: 100% !important
-  display: flex !important
-  flex-direction: column !important
-  justify-content: center !important
-  position: absolute !important
+	height: 100% !important
+	display: flex !important
+	flex-direction: column !important
+	justify-content: center !important
+	position: absolute !important
 
 .cover h1
-  margin: 0 auto 0 auto
-  padding: 0.5em
-  background-color: hsla(0, 0, 0, 0.75)
-  border-radius: 0.2em
+	margin: 0 auto 0 auto
+	padding: 0.5em
+	background-color: hsla(0, 0, 0, 0.75)
+	border-radius: 0.2em
 
 .start
-  h1
-    font-size: 3em !important
-    text-align: left
-  div
-    margin-top: 1em
-    font-style: italic
+	h1
+		font-size: 3em !important
+		text-align: left
+	div
+		margin-top: 1em
+		font-style: italic
 
 .end
-  text-align: center !important
+	text-align: center !important
 
 .footer
-  text-align: center
+	text-align: center
 
 $opacity: 0.25
-ul>, ol>, .eqn
-  .fragment
-    color: hsla(0, 0%, 100%, $opacity)
-    mark
-      color: hsla(0, 0%, 100%, $opacity)
-      font-weight: bold
-      padding: 0.1em
-      background-color: hsla(0, 0%, 0%, 0%) // hsla(60, 100%, 50%,$opacity) !important
-      transition: background-color 0.5s ease
-
-.current-fragment
-  color: hsla(0, 0, 100%, 1) !important
-  mark
-    color: hsla(0, 0%, 0%, 1) !important
-    background-color: hsla(60, 100%, 50%, 1) !important
+ul>, ol>, .eqn, tr
+	th.fragmemt
+		border: none !important
+	.fragment:not(th)
+		color: hsla(0, 0%, 100%, $opacity)
+		mark
+			color: hsla(0, 0%, 100%, $opacity)
+			font-weight: bold
+			padding: 0.1em
+			background-color: hsla(0, 0%, 0%, 0%) // hsla(60, 100%, 50%,$opacity) !important
+			transition: background-color 0.5s ease
+	.current-fragment
+		color: hsla(0, 0, 100%, 1) !important
+		mark
+			color: hsla(0, 0%, 0%, 1) !important
+			background-color: hsla(60, 100%, 50%, 1) !important
 
 .diagram-display // mermaid output
-  width: 75% 
-  height: 50vh
-  max-height: 60% !important
-  margin: auto
-  
-  svg
-    max-width: 100% !important
-    width: 100% !important
-    height: 100%
-    margin: auto
+	width: 75% 
+	height: 50vh
+	max-height: 60% !important
+	margin: auto
+	
+	svg
+		max-width: 100% !important
+		width: 100% !important
+		height: 100%
+		margin: auto
 
 .diagram-data, .mermaid // mermaid code
-  display: none
+	display: none
 
 *
-  image-rendering: optimizeSpeed            
-  image-rendering: -webkit-optimize-contrast
-  image-rendering: optimize-contrast
+	image-rendering: optimizeSpeed            
+	image-rendering: -webkit-optimize-contrast
+	image-rendering: optimize-contrast
 
 .sharp
-  image-rendering: -moz-crisp-edges
-  image-rendering: -o-crisp-edges
-  image-rendering: pixelated
-  -ms-interpolation-mode: nearest-neighbor
+	image-rendering: -moz-crisp-edges
+	image-rendering: -o-crisp-edges
+	image-rendering: pixelated
+	-ms-interpolation-mode: nearest-neighbor
 
 iframe, .inverted
-  // dark theme
-  filter: saturate(200%) invert(1) contrast(85%) brightness(120%) hue-rotate(180deg) saturate(80%)  // some keeda to create color contrast
+	// dark theme
+	filter: saturate(200%) invert(1) contrast(85%) brightness(120%) hue-rotate(180deg) saturate(80%)  // some keeda to create color contrast
 
 iframe // when using iframes as fragments
-  z-index: 0
+	z-index: 0
 
 img, video
-  z-index: 1
-  filter: saturate(125%)
+	z-index: 1
+	filter: saturate(125%)
+
+.reveal table
+	font-size: 0.8em
+	// th // , td
+	// 	text-align: center
+	td
+		border: none
 
 @media (min-width: 768px)
-  .reveal .controls
-    display: none !important
+	.reveal .controls
+		display: none !important

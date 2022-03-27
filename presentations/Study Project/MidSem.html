@@ -80,14 +80,60 @@
             <h1>Literature Review</h1>
           </section>
           <section>
-            <h1>Statistical</h1>
-            <section>
-              <ul>
-                <li>Correlation $\ne$ Causation</li>
-                <li>Causal Mechanism Learning</li>
+            <h1>Statistics</h1>
+            <ul>
+              <li>Correlation <span>$\ne$ Causation</span></li>
+              <li>Causal Analysis</li>
+              <ul> 
+                <li>Causal Effect</li>
+                <li>Causal Mechanism</li>
               </ul>
-              <aside>Causal Mechanism Learning is necessary to deeply provide</aside>
-            </section>
+            </ul>
+            <aside>Causal Mechanism Learning is necessary to deeply provide</aside>
+          </section>
+          <section>
+            <h1>Economics</h1>
+            <ul>
+              <li>Hyper Inflation</li>
+              <ul>
+                <li>Pogba</li>
+                <li>Neymar</li>
+              </ul>
+              <li>Real Cost <span> = Opportunity Cost</span></li>
+            </ul>
+          </section>
+          <section>
+            <h1>Math</h1>
+            <table>
+              <thead>
+                <tr>
+                  <th>Algorithm</th>
+                  <th>Working</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Linear Regression</td>
+                  <td>$\theta_0 + \theta_1 x$</td>
+                </tr>
+                <tr>
+                  <td>Polynomial Regression</td>
+                  <td>$\theta_0 + \theta_1 x + \theta_2 x^2 + \dots$</td>
+                </tr>
+                <tr>
+                  <td>Trees</td>
+                  <td> </td>
+                </tr>
+                <tr>
+                  <td>Random Forests</td>
+                  <td>Multiple Trees</td>
+                </tr>
+                <tr>
+                  <td>Supported Vector Machines</td>
+                  <td>Hyperplane</td>
+                </tr>
+              </tbody>
+            </table>
           </section>
         </section>
         <section>
@@ -121,7 +167,6 @@
     <script>
       Reveal.initialize({
       	hash: true,
-      	
       	controls: true, // hide the arrows
       	
       	//- viewDistance: 2, // it seems bad, but while actually presenting, this is the most stable, because i will take time bw slides anyways
@@ -131,6 +176,10 @@
       
       	overview: false, // i don't really use it; why waste resources
       	center: false,
+      	
+      	width: 1000,
+      	//- height: 1080,
+      	//- margin: 0,
       
       	katex: {
       		local: '../../backend/' + 'node/node_modules/katex',
