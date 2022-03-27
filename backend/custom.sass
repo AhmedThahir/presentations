@@ -40,15 +40,18 @@ section
 		max-width: 100%
 		&.fragment.visible:not(.current-fragment):not(.fragment:last-child)
 			opacity: 0
-		
-.slide-number
-	right: 3vh !important
-	bottom: 3vh !important
-	font-size: 3vh !important
-	font-family: Montserrat !important
+	
+	.slide-number
+		right: 3vh
+		bottom: 3vh
+		font-size: 3vh
+		font-family: Montserrat
 
-.progress
-	min-height: 1.5vh !important
+	.progress
+		min-height: 0.2em
+		transition: min-height 0.1s ease-out
+		&:hover
+			min-height: 0.5em
 
 .start,
 .end,
