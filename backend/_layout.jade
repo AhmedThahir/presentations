@@ -37,23 +37,26 @@ html
 								1. Q&A session at the end
 
 				block content
+				
 				block thanks
 					section.end
 						h1 Thank &nbsp;You
-				block qa
 					section
-						h1 Q&A
-						img(s="qr.svg")
-						aside.
-							1. So let's start the Q&A session
-							1. Feel free to ask any questions
-							1. Meanwhile, QR code - folder containing
-								1. report
-								1. references used for the reseach
-								1. the credits to the photographers
-				section#appendix
-					block appendix
-						h1 Appendix
+						section.cover(img = "qa.jpg")
+							h1 Q&A        
+						section(img = "landing.png")
+							img#qr(s="qr.svg")
+							aside.
+								1. So let's start the Q&A session
+								1. Feel free to ask any questions
+								1. Meanwhile, QR code - folder containing
+									1. report
+									1. references used for the reseach
+									1. the credits to the photographers
+					section#appendix
+						section.cover(img = "appendix.jpg")
+							h1 Appendix
+						block appendix
 		script(src= custom + 'custom.js')
 		script(src= reveal + 'dist/reveal.js')
 
@@ -70,7 +73,7 @@ html
 				overview: false, // i don't really use it; why waste resources
 				center: false,
 				
-				width: 1000,
+				//- width: 1280,
 				//- height: 1080,
 				//- margin: 0,
 

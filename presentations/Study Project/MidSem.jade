@@ -42,12 +42,13 @@ block content
 				li
 
 	section
-		section.cover(img=".jpg")
+		section.cover(img="review.jpg")
 			h1 Literature Review
 		section
 			h1 Statistics
 			ul
 				li Correlation <span>$\ne$ Causation</span>
+				li Randomized Testing
 				li Causal Analysis
 				ul 
 					li Causal Effect
@@ -75,16 +76,23 @@ block content
 						td $\theta_0 + \theta_1 x$
 					tr
 						td Polynomial Regression
-						td $\theta_0 + \theta_1 x + \theta_2 x^2 + \dots$
+						td $\theta_0 + \theta_1 x + \dots + \theta_n x^n$
 					tr
-						td Trees
-						td Nodes with paramaters
+						td Logistic Regression
+						td $g(\theta_0 + \theta_1 x) \\$
+							span $g(z) = \frac1{ 1+e^{-z} }$
+					tr
+						td Decision Trees
+						td Nodes - Parameters
 					tr
 						td Random Forests
-						td Multiple Trees
+						td Collection of Trees
 					tr
 						td Supported Vector Machines
 						td Hyperplane
+		section(img = "linearRegression.png")
+		section(img = "polynomialRegression.png")
+		section(img = "logisticRegression.jpg")
 
 	section
 		section.cover(img="work.jpg")

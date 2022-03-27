@@ -76,13 +76,14 @@
           </section>
         </section>
         <section>
-          <section class="cover" img=".jpg">
+          <section class="cover" img="review.jpg">
             <h1>Literature Review</h1>
           </section>
           <section>
             <h1>Statistics</h1>
             <ul>
               <li>Correlation <span>$\ne$ Causation</span></li>
+              <li>Randomized Testing</li>
               <li>Causal Analysis</li>
               <ul> 
                 <li>Causal Effect</li>
@@ -118,15 +119,19 @@
                 </tr>
                 <tr>
                   <td>Polynomial Regression</td>
-                  <td>$\theta_0 + \theta_1 x + \theta_2 x^2 + \dots$</td>
+                  <td>$\theta_0 + \theta_1 x + \dots + \theta_n x^n$</td>
                 </tr>
                 <tr>
-                  <td>Trees</td>
-                  <td>Nodes with paramaters</td>
+                  <td>Logistic Regression</td>
+                  <td>$g(\theta_0 + \theta_1 x) \\$<span>$g(z) = \frac1{ 1+e^{-z} }$</span></td>
+                </tr>
+                <tr>
+                  <td>Decision Trees</td>
+                  <td>Nodes - Parameters</td>
                 </tr>
                 <tr>
                   <td>Random Forests</td>
-                  <td>Multiple Trees</td>
+                  <td>Collection of Trees</td>
                 </tr>
                 <tr>
                   <td>Supported Vector Machines</td>
@@ -135,6 +140,9 @@
               </tbody>
             </table>
           </section>
+          <section img="linearRegression.png"></section>
+          <section img="polynomialRegression.png"></section>
+          <section img="logisticRegression.jpg"></section>
         </section>
         <section>
           <section class="cover" img="work.jpg">
@@ -147,18 +155,24 @@
           <h1>Thank &nbsp;You</h1>
         </section>
         <section>
-          <h1>Q&A</h1><img s="qr.svg">
-          <aside>
-            1. So let's start the Q&A session
-            1. Feel free to ask any questions
-            1. Meanwhile, QR code - folder containing
-            	1. report
-            	1. references used for the reseach
-            	1. the credits to the photographers
-          </aside>
+          <section class="cover" img="qa.jpg">
+            <h1>Q&A        </h1>
+          </section>
+          <section img="landing.png"><img id="qr" s="qr.svg">
+            <aside>
+              1. So let's start the Q&A session
+              1. Feel free to ask any questions
+              1. Meanwhile, QR code - folder containing
+              	1. report
+              	1. references used for the reseach
+              	1. the credits to the photographers
+            </aside>
+          </section>
         </section>
         <section id="appendix">
-          <h1>Appendix</h1>
+          <section class="cover" img="appendix.jpg">
+            <h1>Appendix</h1>
+          </section>
         </section>
       </div>
     </div>
@@ -177,7 +191,7 @@
       	overview: false, // i don't really use it; why waste resources
       	center: false,
       	
-      	width: 1000,
+      	//- width: 1280,
       	//- height: 1080,
       	//- margin: 0,
       
