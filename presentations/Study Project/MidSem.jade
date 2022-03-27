@@ -7,20 +7,40 @@ block content
 	section
 		section.cover(img="journey.jpg")
 			h1 Journey
-			aside.
-		section(img="sport360.jpg", menu = "Picture")
+		section
+			h1 Sports
+			img(s="sport360.jpg")
+		section
+			h1 Programming
+			iframe(data-src="assets/programming.html")
+		section
+			h1 Economics
+			ul.f Efficient outcomes
+				li.f maximizing output
+				li.f minimizing costs
+		section
+			h1 Data Analysis
+			img(s="flowchart.svg")
+		section(iframe="https://ourworldindata.org/grapher/anxiety-disorders-vs-income-inequality?zoomToSelection=true&minPopulationFilter=1000000&time=2019..latest&country=USA~ARE~BEL"
+						fallback="anxiety-income.svg")
+		section(iframe="https://ourworldindata.org/grapher/prevalence-of-anxiety-disorders-males-vs-females?zoomToSelection=true&minPopulationFilter=1000000&time=latest&country=USA~ARE~BEL"
+						fallback="anxiety-gender.svg")
+		
+		section
+			h1 Sports Analytics
+			img(s="venn.svg")
 		section
 			h1 Why?
-
+			ul
+				li Intersection of interests
+				li Solve problems
+				li Small clubs
+			aside.
+				- Small clubs have to somehow compete with the big ones
 	section
 		section.cover(img="intro.jpg")
 			h1 Introduction
 			aside.
-	section
-		h1 Sports Analytics
-		.rs
-			img(s="flowchart.svg")
-			img(s="venn.svg")
 	
 	section
 		section.cover(img = "research.jpg")
@@ -64,7 +84,7 @@ block content
 					li Neymar
 				li Real Cost <span> = Opportunity Cost</span>
 		section
-			h1 Math
+			h1 Models
 			table
 				thead
 					tr
@@ -88,7 +108,7 @@ block content
 						td Random Forests
 						td Collection of Trees
 					tr
-						td Supported Vector Machines
+						td Supported Vector Machine
 						td Hyperplane
 		section(img = "linearRegression.png")
 		section(img = "polynomialRegression.png")
@@ -97,7 +117,5 @@ block content
 	section
 		section.cover(img="work.jpg")
 			h1 Practical Work
-		section(menu="Jupyter"
-						iframe="01.html")
-		section(menu="Jupyter"
-						iframe="02.html")
+		section(iframe="01.html")
+		section(iframe="02.html")
