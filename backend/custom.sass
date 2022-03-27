@@ -91,11 +91,12 @@ ul>, ol>, .eqn, tr
 			padding: 0.1em
 			background-color: hsla(0, 0%, 0%, 0%) // hsla(60, 100%, 50%,$opacity) !important
 			transition: background-color 0.5s ease
-	.current-fragment
-		color: hsla(0, 0, 100%, 1) !important
-		mark
-			color: hsla(0, 0%, 0%, 1) !important
-			background-color: hsla(60, 100%, 50%, 1) !important
+
+.current-fragment // ensures that span doesn't get affected
+	color: hsla(0, 0, 100%, 1) !important
+	mark
+		color: hsla(0, 0%, 0%, 1) !important
+		background-color: hsla(60, 100%, 50%, 1) !important
 
 .diagram-display // mermaid output
 	width: 75% 
