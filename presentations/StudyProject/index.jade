@@ -1,0 +1,182 @@
+extends ../../backend/_layout.jade
+
+block title
+	h1.f Sports Analytics
+
+block content
+	section
+		h1 What?
+		.rs
+			img(s="venn.svg")
+			img(s="flowchart.svg")
+	section
+		h1 Why?
+		ul
+			li Intersection of interests
+			li Solve problems
+			li Small clubs
+		aside.
+			- Small clubs have to somehow compete with the big ones
+			- make informed decisions
+			- cannot afford to make costly mistakes
+	section
+		section.cover(img = "research.jpg")
+			h1 My Research
+		section
+			h1 Objective
+			ul.f The goal is to formulate a method
+				li <b>not</b> for prediction
+				li but rather 
+					span to determine what truly <mark>produces</mark> effective outcomes
+		section
+			h1 Proposed Method
+			ul
+				li Concept of Causality
+				li Economic Principles <span>- Inflation</span>
+		section
+			h1 Literature Gaps
+			ul
+				li Over-reliance on correlation
+				li Lack of causal understanding
+				li Financial values are in absolute terms
+					br
+					span not relative terms
+
+	section
+		section.cover(img="review.jpg")
+			h1 Literature Review
+		section
+			h1 Statistics
+			ul
+				li Correlation <span>$\ne$ Causation</span>
+				li Randomized Testing
+				li Causal Analysis
+				ul 
+					li Causal Effect
+					li Causal Mechanism
+		section
+			h1 Causal Effect
+			ul.f $ATE = ATT - ATU$
+				li ATE = Average Treatment Effect
+				li ATT = Average Treatment Effect
+				li ATU = Average Treatment Effect
+			aside.
+				Causal Mechanism Learning is necessary to provide meaningful insights
+		section
+			h1 Economics
+			ul
+				li Hyper Inflation
+				ul
+					li Pogba
+					li Neymar
+				li Real Cost <span> = Opportunity Cost</span>
+		section
+			h1 Models
+			table
+				thead
+					tr
+						th Algorithm
+						th Working
+				tbody
+					tr
+						td Linear Regression
+						td $\theta_0 + \theta_1 x$
+					tr
+						td Polynomial Regression
+						td $\theta_0 + \theta_1 x + \dots + \theta_n x^n$
+					tr
+						td Logistic Regression
+						td $g(\theta_0 + \theta_1 x) \\$
+							span $g(z) = \frac1{ 1+e^{-z} }$
+					tr
+						td Decision Trees
+						td Nodes - Parameters
+					tr
+						td Random Forests
+						td Collection of Trees
+					tr
+						td Supported Vector Machine
+						td Hyperplane
+			aside.
+				1.
+				1.
+				1. Sigmoid Function ensures a range from $[0,1]$
+				1.
+				1.
+				1. maximize the margin between 2 categories of data
+		section(img = "linearRegression.png")
+		section(img = "polynomialRegression.png")
+		section(img = "logisticRegression.jpg")
+		section(img = "trees.svg")
+		section(img = "randomForests.svg")
+		section(img = "svm.png")
+		
+		section
+			h1 Implementation
+			table
+				thead
+					tr
+						th Purpose
+						th Tool
+				tbody
+					tr
+						td Programming Language
+						td Python
+					tr
+						td Dataframes Library
+						td Pandas
+					tr
+						td Plotting Library
+						td Matplotlib
+					tr
+						td Prediction Library
+						td SciKit-Learn
+					tr
+						td Math Library
+						td Numpy
+					tr
+						td Integrated Development <br /> Environment
+						td Jupyter Notebook
+			aside.
+				The advantage of these libraries is that they use C++ under the hood
+				So, the performance is really good.
+
+	section
+		section.cover(img="work.jpg")
+			h1 Practical Work
+		section(iframe="01.html")
+		section(iframe="02.html")
+
+block appendix
+	section.cover(img="journey.jpg")
+		h1 Journey
+	section
+		h1 Sports
+		img(s="sport360.jpg")
+	section
+		h1 Programming
+		iframe(data-src="assets/programming.html")
+	section
+		h1 Economics
+		ul
+			li Scarcity of resources
+			li Efficient outcomes
+			ul
+				li.f maximizing output
+				li.f minimizing costs
+	section(iframe="https://ourworldindata.org/grapher/gender-wage-gap-oecd?time=1990..2015&country=~JPN"
+					fallback="wageGap.svg")
+		aside.
+			Insight here:
+			The wage gap has gone down from 1990 to 2015 in Japan
+	section(iframe="https://ourworldindata.org/grapher/prevalence-of-anxiety-disorders-males-vs-females?zoomToSelection=true&minPopulationFilter=1000000&time=1990..2015&country=~JPN"
+					fallback="anxiety-gender.svg")
+		aside.
+			- Insight here:
+				The share of anxiety in women has gone down
+			- Conclusion we can draw:
+				1. In Japan, there is a statistical correlation between
+					- anxiety, and
+					- wage gap
+				2. As a policy, reducing the wage gap *may* reduce anxiety in women
+			- Conclusions will **not** be universally applicable
