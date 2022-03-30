@@ -90,7 +90,6 @@ ul>, ol>, .eqn, tr
 		color: hsla(0, 0%, 100%, $opacity)
 		mark
 			color: hsla(0, 0%, 100%, $opacity)
-			font-weight: bold
 			padding: 0.1em
 			background-color: hsla(0, 0%, 0%, 0%) // hsla(60, 100%, 50%,$opacity) !important
 			transition: background-color 0.5s ease
@@ -98,6 +97,7 @@ ul>, ol>, .eqn, tr
 .current-fragment // ensures that span doesn't get affected
 	color: hsla(0, 0, 100%, 1) !important
 	mark
+		font-weight: bold
 		color: hsla(0, 0%, 0%, 1) !important
 		background-color: hsla(60, 100%, 50%, 1) !important
 
@@ -139,6 +139,7 @@ img, video
 	filter: saturate(125%)
 
 .reveal table
+	margin: auto
 	font-size: 0.8em
 	width: 100%
 	max-width: 100%

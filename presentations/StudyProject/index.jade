@@ -5,71 +5,90 @@ block title
 
 block content
 	section
-		h1 What?
-		.rs
-			img(s="venn.svg")
-			img(s="flowchart.svg")
-	section
-		h1 Why?
-		ul
-			li Intersection of interests
-			li Solve problems
-			li Small clubs
-		aside.
-			- Small clubs have to somehow compete with the big ones
-			- make informed decisions
-			- cannot afford to make costly mistakes
+		h1 Sports Analytics
+		img(s="flowchart.svg")
 	section
 		section.cover(img = "research.jpg")
 			h1 My Research
 		section
 			h1 Objective
-			ul.f The goal is to formulate a method
+			ul.f To formulate a method
 				li <b>not</b> for prediction
-				li but rather 
-					span to determine what truly <mark>produces</mark> effective outcomes
-		section
-			h1 Proposed Method
-			ul
-				li Concept of Causality
-				li Economic Principles <span>- Inflation</span>
+				li but rather
+					span  to determine what <mark>produces</mark> effective outcomes
+				li to identify what to improve
+			aside.
+				- current research in sports analytics mainly focuses on prediction
+				- help coaches identify what to improve on the most
 		section
 			h1 Literature Gaps
 			ul
 				li Over-reliance on correlation
-				li Lack of causal understanding
-				li Financial values are in absolute terms
+				li Lack of causal inference
+				li Financial values - absolute terms
 					br
 					span not relative terms
-
+		section
+			h1 Proposed Method
+			ul
+				li Causal Inference
+				li Economic Principles <span>- Opportunity Cost, Inflation</span>
 	section
 		section.cover(img="review.jpg")
 			h1 Literature Review
 		section
 			h1 Statistics
-			ul
-				li Correlation <span>$\ne$ Causation</span>
-				li Randomized Testing
-				li Causal Analysis
-				ul 
-					li Causal Effect
-					li Causal Mechanism
-		section
-			h1 Causal Effect
-			ul.f $ATE = ATT - ATU$
-				li ATE = Average Treatment Effect
-				li ATT = Average Treatment Effect
-				li ATU = Average Treatment Effect
+			p.f Correlation <span>$\ne$ Causation</span>
+			table
+				thead
+					tr
+						th Type
+						th Use
+				tbody
+					tr
+						td Correlation
+						td Prediction
+					tr
+						td Causal Effect
+						td Decisions - Sample
+					tr
+						td Causal Mechanism
+						td Decisions - Population
 			aside.
-				Causal Mechanism Learning is necessary to provide meaningful insights
+				- Effect
+					- does it affect?
+					- how much
+				- Mechanism
+					- how does it cause?
+					- applyable to other samples
+				- Mechanism is necessary to provide meaningful insights
+		section
+			h1 Causal Models
+			ul
+				li Rubin
+				ul
+					li Randomization
+					li.f $ATE = ATT - ATU$
+				li Judea-Pearl
+			aside.
+				- Rubin - Experimental Data (not always feasible)
+				- Judea-Pearl - Observational Data (not always feasible)
+			aside.
+				|      |                  |
+				| ---- | ---------------- |
+				| ATE  | Entire Sample    |
+				| ATT  | Treated Sample   |
+				| ATU  | Untreated Sample |
+		section(img = "potentialOutcomesDistribution.png")
+		
 		section
 			h1 Economics
 			ul
 				li Hyper Inflation
-				ul
-					li Pogba
-					li Neymar
 				li Real Cost <span> = Opportunity Cost</span>
+			aside.
+				- Pogba
+				- Neymar
 		section
 			h1 Models
 			table
@@ -80,13 +99,13 @@ block content
 				tbody
 					tr
 						td Linear Regression
-						td $\theta_0 + \theta_1 x$
+						td $a_0 + a_1 x$
 					tr
 						td Polynomial Regression
-						td $\theta_0 + \theta_1 x + \dots + \theta_n x^n$
+						td $a_0 + a_1 x + \dots + a_n x^n$
 					tr
 						td Logistic Regression
-						td $g(\theta_0 + \theta_1 x) \\$
+						td $g(a_0 + a_1 x) \\$
 							span $g(z) = \frac1{ 1+e^{-z} }$
 					tr
 						td Decision Trees
@@ -148,6 +167,17 @@ block content
 		section(iframe="02.html")
 
 block appendix
+	section(img="venn.svg")
+	section
+		h1 Why?
+		ul
+			li Intersection of interests
+			li Solve problems
+			li Small clubs
+		aside.
+			- Small clubs have to somehow compete with the big ones
+			- make informed decisions
+			- cannot afford to make costly mistakes
 	section.cover(img="journey.jpg")
 		h1 Journey
 	section

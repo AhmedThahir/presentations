@@ -31,21 +31,7 @@
           </aside>
         </section>
         <section>
-          <h1>What?</h1>
-          <div class="rs"><img s="venn.svg"><img s="flowchart.svg"></div>
-        </section>
-        <section>
-          <h1>Why?</h1>
-          <ul>
-            <li>Intersection of interests</li>
-            <li>Solve problems</li>
-            <li>Small clubs</li>
-          </ul>
-          <aside>
-            - Small clubs have to somehow compete with the big ones
-            - make informed decisions
-            - cannot afford to make costly mistakes
-          </aside>
+          <h1>Sports Analytics</h1><img s="flowchart.svg">
         </section>
         <section>
           <section class="cover" img="research.jpg">
@@ -53,24 +39,29 @@
           </section>
           <section>
             <h1>Objective</h1>
-            <ul class="f">The goal is to formulate a method
+            <ul class="f">To formulate a method
               <li><b>not</b> for prediction</li>
-              <li>but rather <span>to determine what truly <mark>produces</mark> effective outcomes</span></li>
+              <li>but rather<span> to determine what <mark>produces</mark> effective outcomes</span></li>
+              <li>to identify what to improve</li>
             </ul>
-          </section>
-          <section>
-            <h1>Proposed Method</h1>
-            <ul>
-              <li>Concept of Causality</li>
-              <li>Economic Principles <span>- Inflation</span></li>
-            </ul>
+            <aside>
+              - current research in sports analytics mainly focuses on prediction
+              - help coaches identify what to improve on the most
+            </aside>
           </section>
           <section>
             <h1>Literature Gaps</h1>
             <ul>
               <li>Over-reliance on correlation</li>
-              <li>Lack of causal understanding</li>
-              <li>Financial values are in absolute terms<br><span>not relative terms</span></li>
+              <li>Lack of causal inference</li>
+              <li>Financial values - absolute terms<br><span>not relative terms</span></li>
+            </ul>
+          </section>
+          <section>
+            <h1>Proposed Method</h1>
+            <ul>
+              <li>Causal Inference</li>
+              <li>Economic Principles <span>- Opportunity Cost, Inflation</span></li>
             </ul>
           </section>
         </section>
@@ -80,27 +71,72 @@
           </section>
           <section>
             <h1>Statistics</h1>
-            <ul>
-              <li>Correlation <span>$\ne$ Causation</span></li>
-              <li>Randomized Testing</li>
-              <li>Causal Analysis</li>
-              <ul> 
-                <li>Causal Effect</li>
-                <li>Causal Mechanism</li>
-              </ul>
-            </ul>
-            <aside>Causal Mechanism Learning is necessary to deeply provide</aside>
+            <p class="f">Correlation <span>$\ne$ Causation</span></p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Type</th>
+                  <th>Use</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Correlation</td>
+                  <td>Prediction</td>
+                </tr>
+                <tr>
+                  <td>Causal Effect</td>
+                  <td>Decisions - Sample</td>
+                </tr>
+                <tr>
+                  <td>Causal Mechanism</td>
+                  <td>Decisions - Population</td>
+                </tr>
+              </tbody>
+            </table>
+            <aside>
+              - Effect
+              	- does it affect?
+              	- how much
+              - Mechanism
+              	- how does it cause?
+              	- applyable to other samples
+              - Mechanism is necessary to provide meaningful insights
+            </aside>
           </section>
+          <section>
+            <h1>Causal Models</h1>
+            <ul>
+              <li>Rubin</li>
+              <ul>
+                <li>Randomization</li>
+                <li class="f">$ATE = ATT - ATU$</li>
+              </ul>
+              <li>Judea-Pearl</li>
+            </ul>
+            <aside>
+              - Rubin - Experimental Data (not always feasible)
+              - Judea-Pearl - Observational Data (not always feasible)
+            </aside>
+            <aside>
+              |      |                  |
+              | ---- | ---------------- |
+              | ATE  | Entire Sample    |
+              | ATT  | Treated Sample   |
+              | ATU  | Untreated Sample |
+            </aside>
+          </section>
+          <section img="potentialOutcomesDistribution.png"></section>
           <section>
             <h1>Economics</h1>
             <ul>
               <li>Hyper Inflation</li>
-              <ul>
-                <li>Pogba</li>
-                <li>Neymar</li>
-              </ul>
               <li>Real Cost <span> = Opportunity Cost</span></li>
             </ul>
+            <aside>
+              - Pogba
+              - Neymar
+            </aside>
           </section>
           <section>
             <h1>Models</h1>
@@ -114,15 +150,15 @@
               <tbody>
                 <tr>
                   <td>Linear Regression</td>
-                  <td>$\theta_0 + \theta_1 x$</td>
+                  <td>$a_0 + a_1 x$</td>
                 </tr>
                 <tr>
                   <td>Polynomial Regression</td>
-                  <td>$\theta_0 + \theta_1 x + \dots + \theta_n x^n$</td>
+                  <td>$a_0 + a_1 x + \dots + a_n x^n$</td>
                 </tr>
                 <tr>
                   <td>Logistic Regression</td>
-                  <td>$g(\theta_0 + \theta_1 x) \\$<span>$g(z) = \frac1{ 1+e^{-z} }$</span></td>
+                  <td>$g(a_0 + a_1 x) \\$<span>$g(z) = \frac1{ 1+e^{-z} }$</span></td>
                 </tr>
                 <tr>
                   <td>Decision Trees</td>
@@ -224,6 +260,20 @@
         <section id="appendix">
           <section class="cover" img="appendix.jpg">
             <h1>Appendix</h1>
+          </section>
+          <section img="venn.svg"></section>
+          <section>
+            <h1>Why?</h1>
+            <ul>
+              <li>Intersection of interests</li>
+              <li>Solve problems</li>
+              <li>Small clubs</li>
+            </ul>
+            <aside>
+              - Small clubs have to somehow compete with the big ones
+              - make informed decisions
+              - cannot afford to make costly mistakes
+            </aside>
           </section>
           <section class="cover" img="journey.jpg">
             <h1>Journey</h1>
