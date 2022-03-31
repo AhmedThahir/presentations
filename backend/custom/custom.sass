@@ -1,5 +1,5 @@
 // make everything in terms of em
-	
+
 @font-face
 	font-family: 'Montserrat'
 	src: url('../../backend/fonts/Montserrat/Montserrat.ttf') format("truetype")
@@ -83,16 +83,18 @@ section
 	text-align: center
 
 $opacity: 0.25
-ul>, ol>, .eqn, tr
-	th.fragmemt
-		border: none !important
-	.fragment:not(th)
-		color: hsla(0, 0%, 100%, $opacity)
-		mark
+
+@media screen
+	ul>, ol>, .eqn, tr
+		th.fragmemt
+			border: none !important
+		.fragment:not(th)
 			color: hsla(0, 0%, 100%, $opacity)
-			padding: 0.1em
-			background-color: hsla(0, 0%, 0%, 0%) // hsla(60, 100%, 50%,$opacity) !important
-			transition: background-color 0.5s ease
+			mark
+				color: hsla(0, 0%, 100%, $opacity)
+				padding: 0.1em
+				background-color: hsla(0, 0%, 0%, 0%) // hsla(60, 100%, 50%,$opacity) !important
+				transition: background-color 0.5s ease
 
 .current-fragment // ensures that span doesn't get affected
 	color: hsla(0, 0, 100%, 1) !important

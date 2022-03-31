@@ -1,6 +1,6 @@
 -var backend = "../../backend/"
 -var reveal = backend + "reveal.js-master/"
--var custom = backend + "customCompiled/"
+-var custom = backend + "custom/"
 -var customPlugin = backend + "plugins/"
 
 doctype html
@@ -14,7 +14,7 @@ html
 		link(rel='stylesheet' href= reveal + 'dist/reveal.css')
 		link(rel='stylesheet' href= reveal + 'dist/theme/black.css')
 
-		link(rel='stylesheet' href= custom + 'custom.css' media = "screen")
+		link(rel='stylesheet' href= custom + 'custom.css')
 	body
 		.reveal
 			.slides
@@ -22,7 +22,9 @@ html
 						section.start
 							block title
 								h1.f Presentation Title
-							.f(data-fragment-index="1") Ahmed Thahir
+							.f(data-fragment-index="1")
+								block presenter
+									span Ahmed Thahir
 							aside.
 								# Self
 
@@ -39,6 +41,7 @@ html
 				block content
 				
 				block thanks
+					//- blank for looping
 					section.end
 						h1 Thank &nbsp;You
 					section
@@ -91,12 +94,8 @@ html
 					pointerSize: 30, // pointer size in px, default 12
 				},
 
-				
-			});
-
-			Reveal.configure({
-				//- pdfSeparateFragments: false,
-				//- pdfMaxPagesPerSlide: 1,
+				pdfSeparateFragments: false,
+				pdfMaxPagesPerSlide: 1,
 				navigationMode: "linear", // left-right arrows traverse horizontal and vertical slides
 				keyboard: {
 					// these are javascript keycodes
@@ -176,3 +175,9 @@ html
 				}
 
 			}
+		block autoSlide
+			//- script.
+			//- 	Reveal.configure({
+			//- 		autoSlide: 500,
+			//- 		loop: true
+			//- 	});

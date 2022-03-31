@@ -1,0 +1,17 @@
+extends ../../backend/_layout.jade
+
+block autoSlide
+	script.
+		Reveal.configure({
+			autoSlide: 2000,
+			loop: true
+		});
+
+block opening
+
+block content
+	section.cover(img="experiment.jpg")
+		h1 General Chemistry
+	include _content.jade
+
+block thanks

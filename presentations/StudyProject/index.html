@@ -7,14 +7,15 @@
     <link rel="stylesheet" href="../../backend/reveal.js-master/dist/reset.css">
     <link rel="stylesheet" href="../../backend/reveal.js-master/dist/reveal.css">
     <link rel="stylesheet" href="../../backend/reveal.js-master/dist/theme/black.css">
-    <link rel="stylesheet" href="../../backend/customCompiled/custom.css" media="screen">
+    <link rel="stylesheet" href="../../backend/custom/custom.css">
   </head>
   <body>
     <div class="reveal">
       <div class="slides">
         <section class="start">
           <h1 class="f">Sports Analytics</h1>
-          <div class="f" data-fragment-index="1">Ahmed Thahir</div>
+          <div class="f" data-fragment-index="1"><span>Ahmed Thahir</span>
+          </div>
           <aside>
             # Self
             
@@ -317,7 +318,7 @@
         </section>
       </div>
     </div>
-    <script src="../../backend/customCompiled/custom.js"></script>
+    <script src="../../backend/custom/custom.js"></script>
     <script src="../../backend/reveal.js-master/dist/reveal.js"></script>
     <script>
       Reveal.initialize({
@@ -350,12 +351,8 @@
       		pointerSize: 30, // pointer size in px, default 12
       	},
       
-      	
-      });
-      
-      Reveal.configure({
-      	//- pdfSeparateFragments: false,
-      	//- pdfMaxPagesPerSlide: 1,
+      	pdfSeparateFragments: false,
+      	pdfMaxPagesPerSlide: 1,
       	navigationMode: "linear", // left-right arrows traverse horizontal and vertical slides
       	keyboard: {
       		// these are javascript keycodes
