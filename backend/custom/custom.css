@@ -198,9 +198,3 @@ img, video {
   position: absolute;
   top: 1em;
 }
-
-@media (min-width: 768px) {
-  .reveal .controls {
-    display: none !important;
-  }
-}
