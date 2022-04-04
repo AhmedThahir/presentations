@@ -33,7 +33,7 @@
           </aside>
         </section>
         <section>
-          <h1>Sports Analytics</h1><img s="flowchart.svg">
+          <h1>Sports Analytics</h1><img data="flowchart.svg">
         </section>
         <section>
           <section class="cover" img="research.jpg">
@@ -281,7 +281,7 @@
             <h1>Journey</h1>
           </section>
           <section>
-            <h1>Sports</h1><img s="sport360.jpg">
+            <h1>Sports</h1><img data="sport360.jpg">
           </section>
           <section>
             <h1>Programming</h1>
@@ -368,7 +368,11 @@
       			fullscreen: true
       		}
       	});
-      load();
+      
+      Reveal.on( 'ready', event => {
+      	load();
+      } );
+      
       // plugins
       function load()
       {
@@ -400,10 +404,12 @@
       			Reveal.registerPlugin( RevealMenu )
       	})
       
-      	loadScript( "../../backend/plugins/" + 'toolbar/toolbar.js' ).then(() => {
-      			Reveal.registerPlugin( RevealToolbar )
-      	})
-      
+      	if(window.innerWidth < 1000)
+      	{
+      		loadScript( "../../backend/plugins/" + 'toolbar/toolbar.js' ).then(() => {
+      				Reveal.registerPlugin( RevealToolbar )
+      		})
+      	}
       	//- loadStyle("../../backend/plugins/" + 'pointer/pointer.css')
       	//- loadScript( "../../backend/plugins/" + 'pointer/pointer.js' ).then(() => {
       	//-     Reveal.registerPlugin( RevealPointer )

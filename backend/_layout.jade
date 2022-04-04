@@ -111,7 +111,11 @@ html
 						fullscreen: true
 					}
 				});
-			load();
+			
+			Reveal.on( 'ready', event => {
+				load();
+			} );
+			
 			// plugins
 			function load()
 			{
@@ -143,10 +147,12 @@ html
 						Reveal.registerPlugin( RevealMenu )
 				})
 
-				loadScript( "#{customPlugin}" + 'toolbar/toolbar.js' ).then(() => {
-						Reveal.registerPlugin( RevealToolbar )
-				})
-
+				if(window.innerWidth < 1000)
+				{
+					loadScript( "#{customPlugin}" + 'toolbar/toolbar.js' ).then(() => {
+							Reveal.registerPlugin( RevealToolbar )
+					})
+				}
 				//- loadStyle("#{customPlugin}" + 'pointer/pointer.css')
 				//- loadScript( "#{customPlugin}" + 'pointer/pointer.js' ).then(() => {
 				//-     Reveal.registerPlugin( RevealPointer )

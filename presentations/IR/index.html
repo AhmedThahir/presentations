@@ -56,7 +56,7 @@
           </section>
           <section>
             <h1>Human Rights</h1>
-            <div class="rs"><img s="hongKongProtests.jpg"><img s="concentrationCamp1.jpg"><img s="concentrationCamp2.jpg"><img s="laborExploitation.jpg"></div>
+            <div class="rs"><img data="hongKongProtests.jpg"><img data="concentrationCamp1.jpg"><img data="concentrationCamp2.jpg"><img data="laborExploitation.jpg"></div>
             <aside>
               China has been very notorious for its human rights abuse. 
               
@@ -96,7 +96,7 @@
           </section>
           <section>
             <h1>International Waters</h1>
-            <div class="rs"><img s="chinaSea.png"></div>
+            <div class="rs"><img data="chinaSea.png"></div>
             <aside>
               1. China builds artificial islands and sets up military bases in the South China Sea. China insists that its intentions are non-militaristic, but its actions say otherwise
               1. China does this in order to extract the natural resources of those regions and to simultaneously prevent other countries from doing so. Moreover, they avail more efficient trading routes.
@@ -106,7 +106,7 @@
           </section>
           <section>
             <h1>Investment & Debt</h1>
-            <div class="rs"><img s="Hambantota.jpg"><img s="africa.png"></div>
+            <div class="rs"><img data="Hambantota.jpg"><img data="africa.png"></div>
             <aside>
               as the Japanese guest lecturer said, China is doing a lot of propaganda
               
@@ -121,7 +121,7 @@
           </section>
           <section>
             <h1>Biowarfare</h1>
-            <div class="rs"><img s="wuhan.jpg"></div>
+            <div class="rs"><img data="wuhan.jpg"></div>
             <aside>
               1. It seems very suspicious that the origin of the virus was from Wuhan, the same place where there is a research center for virology(Wuhan Institute of Virology).
               1. Moreover, the fact that China hid the news of the outbreak supports the theory even further.
@@ -137,7 +137,7 @@
           <section menu="Graph - Economic Decline" iframe="https://ourworldindata.org/grapher/economic-decline-in-the-second-quarter-of-2020?country=CHN~USA~JPN~GBR~AUT~BGR~BEL~CAN~CHL~COL~CYP~CZE~DNK~EU~Euro+area~FIN~G7~FRA~DEU~HUN~IDN~ISR~ITA~LVA~TUN~TWN~SWE~ESP~KOR~SVK~ROU~SGP~PRT~POL~PER~PHL~OECD+-+Total~NOR~NGA~NLD~NAFTA~MEX~MYS~LTU" fallback="fallback/economicDecline2.svg"></section>
           <section>
             <h1>Cyberspace</h1>
-            <div class="rs"><img s="cyberAttacks1.jpg"><img s="cyberAttacks2.jpg"><img s="cyberAttacks3.jpg"></div>
+            <div class="rs"><img data="cyberAttacks1.jpg"><img data="cyberAttacks2.jpg"><img data="cyberAttacks3.jpg"></div>
             <aside>
               cyber warfare is a relatively cheap mode of warfare
               
@@ -313,7 +313,11 @@
       			fullscreen: true
       		}
       	});
-      load();
+      
+      Reveal.on( 'ready', event => {
+      	load();
+      } );
+      
       // plugins
       function load()
       {
@@ -345,10 +349,12 @@
       			Reveal.registerPlugin( RevealMenu )
       	})
       
-      	loadScript( "../../backend/plugins/" + 'toolbar/toolbar.js' ).then(() => {
-      			Reveal.registerPlugin( RevealToolbar )
-      	})
-      
+      	if(window.innerWidth < 1000)
+      	{
+      		loadScript( "../../backend/plugins/" + 'toolbar/toolbar.js' ).then(() => {
+      				Reveal.registerPlugin( RevealToolbar )
+      		})
+      	}
       	//- loadStyle("../../backend/plugins/" + 'pointer/pointer.css')
       	//- loadScript( "../../backend/plugins/" + 'pointer/pointer.js' ).then(() => {
       	//-     Reveal.registerPlugin( RevealPointer )

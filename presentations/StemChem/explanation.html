@@ -42,7 +42,7 @@
         <section>
           <section>
             <h1>Components of Milk</h1>
-            <div class="rs"><img s="water.svg"><img s="fat.svg"><img s="protein.svg"></div>
+            <div class="rs"><img data="water.svg"><img data="fat.svg"><img data="protein.svg"></div>
           </section>
           <section vid="milkDispersion.webm"></section>
           <section vid="milkInteractions.webm"></section>
@@ -98,7 +98,11 @@
       			fullscreen: true
       		}
       	});
-      load();
+      
+      Reveal.on( 'ready', event => {
+      	load();
+      } );
+      
       // plugins
       function load()
       {
@@ -130,10 +134,12 @@
       			Reveal.registerPlugin( RevealMenu )
       	})
       
-      	loadScript( "../../backend/plugins/" + 'toolbar/toolbar.js' ).then(() => {
-      			Reveal.registerPlugin( RevealToolbar )
-      	})
-      
+      	if(window.innerWidth < 1000)
+      	{
+      		loadScript( "../../backend/plugins/" + 'toolbar/toolbar.js' ).then(() => {
+      				Reveal.registerPlugin( RevealToolbar )
+      		})
+      	}
       	//- loadStyle("../../backend/plugins/" + 'pointer/pointer.css')
       	//- loadScript( "../../backend/plugins/" + 'pointer/pointer.js' ).then(() => {
       	//-     Reveal.registerPlugin( RevealPointer )

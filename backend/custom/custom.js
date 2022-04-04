@@ -4,7 +4,7 @@ const assetLoc = "assets/";
 const assets = document.querySelectorAll("img, video, audio");
 for (let i = 0; i < assets.length; i++) {
 	assets[i].setAttribute("loading", "lazy");
-	assets[i].setAttribute("data-src", assetLoc + assets[i].getAttribute("s"));
+	assets[i].setAttribute("data-src", assetLoc + assets[i].getAttribute("data"));
 }
 // const appendix = document.getElementById("appendix").getElementsByTagName("section");
 const appendix = document.querySelectorAll("#appendix section");
