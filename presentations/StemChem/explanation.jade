@@ -1,5 +1,14 @@
 extends ../../backend/_layout.jade
 
+block settings
+	script.
+		Reveal.configure({
+			controls: true,
+			toolbar: {
+				fullscreen: true
+			}
+		});
+
 block opening
 
 block content

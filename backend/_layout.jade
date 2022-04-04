@@ -15,6 +15,7 @@ html
 		link(rel='stylesheet' href= reveal + 'dist/theme/black.css')
 
 		link(rel='stylesheet' href= custom + 'custom.css')
+
 	body
 		.reveal
 			.slides
@@ -24,7 +25,7 @@ html
 								h1.f Presentation Title
 							.f(data-fragment-index="1")
 								block presenter
-									span Ahmed Thahir
+									div Ahmed Thahir
 							aside.
 								# Self
 
@@ -66,7 +67,7 @@ html
 		script.
 			Reveal.initialize({
 				hash: true,
-				//- controls: false, // hide the arrows
+				controls: false, // hide the arrows
 				
 				//- viewDistance: 2, // it seems bad, but while actually presenting, this is the most stable, because i will take time bw slides anyways
 				preloadIframes: true, // loads iframes only within view distance
@@ -103,8 +104,14 @@ html
 				}
 			});
 
+			if(window.innerWidth < 1000)
+				Reveal.configure({
+					controls: true,
+					toolbar: {
+						fullscreen: true
+					}
+				});
 			load();
-
 			// plugins
 			function load()
 			{
@@ -134,6 +141,10 @@ html
 
 				loadScript( "#{customPlugin}" + 'menu/menu.js' ).then(() => {
 						Reveal.registerPlugin( RevealMenu )
+				})
+
+				loadScript( "#{customPlugin}" + 'toolbar/toolbar.js' ).then(() => {
+						Reveal.registerPlugin( RevealToolbar )
 				})
 
 				//- loadStyle("#{customPlugin}" + 'pointer/pointer.css')
@@ -173,11 +184,17 @@ html
 						Reveal.registerPlugin( RevealNotes )
 					})
 				}
-
 			}
-		block autoSlide
+		block settings
 			//- script.
-			//- 	Reveal.configure({
-			//- 		autoSlide: 500,
-			//- 		loop: true
-			//- 	});
+				Reveal.configure({
+					autoSlide: 2000,
+					loop: true
+				});
+
+				Reveal.configure({
+					controls: true,
+					toolbar: {
+						fullscreen: true
+					}
+				});
