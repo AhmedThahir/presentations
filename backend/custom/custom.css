@@ -47,9 +47,7 @@ section {
   width: 100%;
   max-width: 100%;
 }
-.reveal img.fragment.visible:not(.current-fragment):not(.fragment:last-child),
-.reveal video.fragment.visible:not(.current-fragment):not(.fragment:last-child),
-.reveal iframe.fragment.visible:not(.current-fragment):not(.fragment:last-child) {
+.reveal .r-stack .fragment.visible:not(.current-fragment):not(.fragment:last-child) {
   opacity: 0;
 }
 .reveal .slide-number {
@@ -95,7 +93,7 @@ section {
   font-size: 3em !important;
   text-align: left;
 }
-.start div {
+.start div > div {
   margin-top: 1em;
   font-style: italic;
 }

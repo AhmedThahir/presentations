@@ -7,7 +7,7 @@ for (let i = 0; i < assets.length; i++) {
   assets[i].setAttribute("loading", "lazy");
   
   assets[i].setAttribute("data-src",
-  assetLoc + assets[i].getAttribute("s")
+  assetLoc + assets[i].getAttribute("data")
   );
 }
 

@@ -38,9 +38,10 @@ section
 		object-fit: contain
 		width: 100%
 		max-width: 100%
-		&.fragment.visible:not(.current-fragment):not(.fragment:last-child)
-			opacity: 0
 	
+	.r-stack .fragment.visible:not(.current-fragment):not(.fragment:last-child)
+		opacity: 0
+
 	.slide-number
 		right: 3vh
 		bottom: 3vh
@@ -72,7 +73,7 @@ section
 	h1
 		font-size: 3em !important
 		text-align: left
-	div
+	div>div
 		margin-top: 1em
 		font-style: italic
 
@@ -164,3 +165,4 @@ img, video
 	position: absolute
 	top: 1em
 	// left: 2em
+	
