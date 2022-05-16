@@ -90,5 +90,6 @@ const fragments = document.querySelectorAll("img:not(.fallback), video, iframe, 
 // even ul:not(ul ul) isn't ideal
 );
 for (let i = 0; i < fragments.length; i++) {
-    fragments[i].classList.add("fragment");
+    if (!fragments[i].classList.contains("nf"))
+        fragments[i].classList.add("fragment");
 }
