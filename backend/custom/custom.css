@@ -11,9 +11,13 @@ section {
   font-family: "Montserrat";
 }
 
-.reveal .slide-background-content[style^=background-image] {
+.reveal .cover .slide-background-content[style^=background-image] {
   -webkit-filter: contrast(115%) saturate(125%) brightness(50%);
           filter: contrast(115%) saturate(125%) brightness(50%);
+}
+.reveal .slide-background-content {
+  -webkit-filter: saturate(125%);
+          filter: saturate(125%);
 }
 .reveal h1 {
   font-size: 2em;
@@ -106,21 +110,20 @@ section {
   text-align: center;
 }
 
-@media screen {
-  ul > th.fragmemt, ol > th.fragmemt, .eqn th.fragmemt, tr th.fragmemt {
-    border: none !important;
-  }
-  ul > .fragment:not(th), ol > .fragment:not(th), .eqn .fragment:not(th), tr .fragment:not(th) {
-    color: rgba(255, 255, 255, 0.25);
-  }
-  ul > .fragment:not(th) mark, ol > .fragment:not(th) mark, .eqn .fragment:not(th) mark, tr .fragment:not(th) mark {
-    color: rgba(255, 255, 255, 0.25);
-    padding: 0.1em;
-    background-color: rgba(0, 0, 0, 0);
-    -webkit-transition: background-color 0.5s ease;
-    transition: background-color 0.5s ease;
-  }
+ul > th.fragmemt, ol > th.fragmemt, .eqn th.fragmemt, tr th.fragmemt {
+  border: none !important;
 }
+ul > .fragment:not(th), ol > .fragment:not(th), .eqn .fragment:not(th), tr .fragment:not(th) {
+  color: rgba(255, 255, 255, 0.25);
+}
+ul > .fragment:not(th) mark, ol > .fragment:not(th) mark, .eqn .fragment:not(th) mark, tr .fragment:not(th) mark {
+  color: rgba(255, 255, 255, 0.25);
+  padding: 0.1em;
+  background-color: rgba(0, 0, 0, 0);
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+}
+
 .current-fragment {
   color: white !important;
 }

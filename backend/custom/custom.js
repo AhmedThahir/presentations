@@ -40,7 +40,8 @@ for (let i = 0; i < mer.length;) { // no updation - this works cuz the last elem
 // renaming
 const section = document.getElementsByTagName("section");
 for (let i = 0; i < section.length; i++) {
-    if (!section[i].classList.contains("cover"))
+    if (!section[i].classList.contains("cover") &&
+        !section[i].classList.contains("full"))
         section[i].setAttribute("data-background-size", "contain");
     // menu name
     const name = section[i].getAttribute("menu");

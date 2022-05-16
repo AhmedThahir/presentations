@@ -11,8 +11,11 @@ section
 	text-align: left
 	font-family: "Montserrat"
 .reveal
-	.slide-background-content[style^="background-image"]
-		filter: contrast(115%) saturate(125%) brightness(50%) // blur(3px) // order matters
+	.cover
+		.slide-background-content[style^="background-image"]
+			filter: contrast(115%) saturate(125%) brightness(50%) // blur(3px) // order matters
+	.slide-background-content
+		filter: saturate(125%)
 	h1
 		font-size: 2em
 		font-family: "Montserrat"
@@ -85,17 +88,16 @@ section
 
 $opacity: 0.25
 
-@media screen
-	ul>, ol>, .eqn, tr
-		th.fragmemt
-			border: none !important
-		.fragment:not(th)
+ul>, ol>, .eqn, tr
+	th.fragmemt
+		border: none !important
+	.fragment:not(th)
+		color: hsla(0, 0%, 100%, $opacity)
+		mark
 			color: hsla(0, 0%, 100%, $opacity)
-			mark
-				color: hsla(0, 0%, 100%, $opacity)
-				padding: 0.1em
-				background-color: hsla(0, 0%, 0%, 0%) // hsla(60, 100%, 50%,$opacity) !important
-				transition: background-color 0.5s ease
+			padding: 0.1em
+			background-color: hsla(0, 0%, 0%, 0%) // hsla(60, 100%, 50%,$opacity) !important
+			transition: background-color 0.5s ease
 
 .current-fragment // ensures that span doesn't get affected
 	color: hsla(0, 0, 100%, 1) !important
