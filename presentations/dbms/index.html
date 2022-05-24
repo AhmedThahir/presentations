@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Ahmed's Presentation</title>
+    <link rel="stylesheet" href="../../backend/reveal.js-master/dist/reset.css">
+    <link rel="stylesheet" href="../../backend/reveal.js-master/dist/reveal.css">
+    <link rel="stylesheet" href="../../backend/reveal.js-master/dist/theme/black.css">
+    <link rel="stylesheet" href="../../backend/custom/custom.css">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section class="start">
+          <h1 class="f">
+            <div>Resume Management</div>
+          </h1>
+          <div class="f" data-fragment-index="1">
+            <div>Anmol, Anurag, Bharat, Ishan, Thahir</div>
+          </div>
+          <aside>
+            # Self
+            
+            1. ***Click notes to get back focus***
+            1. Lights off
+            1. Phone - Silent
+            1. Water
+            1. Use the audience screen for animations
+            
+            # Audience
+            1. audible/issues, let me know
+            1. Q&A session at the end
+            
+          </aside>
+        </section>
+        <section>
+          <section class="cover" img="intro.jpg">
+            <h1>Introduction</h1>
+          </section>
+          <section img="kayal1.png"></section>
+          <section img="kayal2.png"></section>
+          <section img="kayal3.png"></section>
+          <section img="beach.jpg"></section>
+        </section>
+        <section>
+          <section class="cover" img="review.jpg">
+            <h1>Discussion</h1>
+          </section>
+          <section class="full" img="graduation.jpg"></section>
+          <section img="jameel.jpg"></section>
+        </section>
+        <section>
+          <section class="cover" img="work.jpg">
+            <h1>Implementation</h1>
+          </section>
+          <section>
+            <h1>Implementation</h1>
+            <table>
+              <thead>
+                <tr>
+                  <th>Purpose</th>
+                  <th>Tools</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Front-End</td>
+                  <td>HTML, CSS <span>(Bootstrap)</span></td>
+                </tr>
+                <tr>
+                  <td>Backend</td>
+                  <td>PHP</td>
+                </tr>
+                <tr>
+                  <td>Querying Language</td>
+                  <td>mySQL</td>
+                </tr>
+                <tr>
+                  <td>Xampp</td>
+                  <td>Local Hosting</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section img="landing_page.png"></section>
+          <section img="er.svg"></section>
+          <section img="er1.png"></section>
+          <section img="er2.png"></section>
+          <section img="er3.png"></section>
+          <section>
+            <h1>Normalization</h1>
+            <ul>
+              <li>3NF</li>
+              <li>Prevent accidental loss <span>of functional dependencies</span></li>
+            </ul>
+          </section>
+          <section img="schema.svg"></section>
+          <section>
+            <h1>RA, RC</h1>
+            <ul>
+              <li>RA <span>- Relational Algebra</span></li>
+              <li>TRC <span>- Tuple Relational Calculus</span></li>
+              <li>DRC <span>- Domain Relational Calculus</span></li>
+            </ul>
+          </section>
+          <section>
+            <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>SELECT email 
+FROM company 
+WHERE email ='$email';</code></pre><span>
+              $$
+              \pi_\text{email} \Big( \sigma_\text{email=‘\$email’} \text{(company)} \Big)
+              $$</span><span>
+              $$
+              \{
+              	t | \exists c \in
+              \text{company(t[email]=c[email]} \land \\
+              	\text{
+              		c[email]=‘\$email’)
+              		}
+              \}
+              $$</span><span>
+              $$
+              \{
+              	\exists \text{ic,n,cn,c,st,ci,co,w,p,a,l,cd,ac(} \\
+              	<\text{ic,n,cn,c,st,ci,co,w,e,p,a,l,cd,ac}> \in \\
+              	\text{company} \land \text{e=‘\$email’}
+              	)
+              \}
+              $$</span>
+          </section>
+        </section>
+        <section class="cover" img="code.jpg">
+          <h1>Demo</h1>
+        </section>
+        <section class="end">
+          <h1>Thank &nbsp;You</h1>
+        </section>
+        <section>
+          <section class="cover" img="qa.jpg">
+            <h1>Q&A        </h1>
+          </section>
+          <section img="landing.png"><img id="qr" data="qr.svg">
+            <aside>
+              1. So let's start the Q&A session
+              1. Feel free to ask any questions
+              1. Meanwhile, QR code - folder containing
+              	1. report
+              	1. references used for the reseach
+              	1. the credits to the photographers
+            </aside>
+          </section>
+        </section>
+        <section id="appendix">
+          <section class="cover" img="appendix.jpg">
+            <h1>Appendix</h1>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="../../backend/custom/custom.js"></script>
+    <script src="../../backend/reveal.js-master/dist/reveal.js"></script>
+    <script>
+      Reveal.initialize({
+      	hash: true,
+      	controls: false, // hide the arrows
+      	
+      	//- viewDistance: 2, // it seems bad, but while actually presenting, this is the most stable, because i will take time bw slides anyways
+      	preloadIframes: true, // loads iframes only within view distance
+      
+      	hideCursorTime: 1000, // Time before the cursor is hidden (in ms)
+      
+      	overview: false, // i don't really use it; why waste resources
+      	center: false,
+      	
+      	//- width: 1280,
+      	//- height: 1080,
+      	//- margin: 0,
+      
+      	katex: {
+      		local: '../../backend/' + 'node/node_modules/katex',
+      	},
+      
+      	menu: {
+      		openButton: false
+      	},
+      
+      	pointer: {
+      		key: "p", // key to enable pointer, default "q", not case-sensitive
+      		color: "hsla(0, 80%, 50%, 0.85)", // color of a cursor, default "red" any valid CSS color
+      		pointerSize: 30, // pointer size in px, default 12
+      	},
+      
+      	pdfSeparateFragments: false,
+      	pdfMaxPagesPerSlide: 1,
+      	navigationMode: "linear", // left-right arrows traverse horizontal and vertical slides
+      	keyboard: {
+      		// these are javascript keycodes
+      		90: 'togglePause'
+      	}
+      });
+      
+      if(window.innerWidth < 1000)
+      	Reveal.configure({
+      		controls: true,
+      		toolbar: {
+      			fullscreen: true
+      		}
+      	});
+      
+      Reveal.on( 'ready', event => {
+      	load();
+      } );
+      
+      // plugins
+      function load()
+      {
+      	
+      	const loadScript = src => {
+      	return new Promise((resolve, reject) => {
+      			const script = document.createElement('script');
+      			script.type = 'text/javascript';
+      			script.onload = resolve;
+      			script.onerror = reject;
+      			script.src = src;
+      			document.head.append(script);
+      		})
+      	}
+      
+      	const loadStyle = href => {
+      	return new Promise((resolve, reject) => {
+      			const style = document.createElement('link');
+      			style.rel="stylesheet";
+      			style.type = 'text/css';
+      			style.onload = resolve;
+      			style.onerror = reject;
+      			style.href = href;
+      			document.head.append(style);
+      		})
+      	}
+      
+      	loadScript( "../../backend/plugins/" + 'menu/menu.js' ).then(() => {
+      			Reveal.registerPlugin( RevealMenu )
+      	})
+      
+      	if(window.innerWidth < 1000)
+      	{
+      		loadScript( "../../backend/plugins/" + 'toolbar/toolbar.js' ).then(() => {
+      				Reveal.registerPlugin( RevealToolbar )
+      		})
+      	}
+      	//- loadStyle("../../backend/plugins/" + 'pointer/pointer.css')
+      	//- loadScript( "../../backend/plugins/" + 'pointer/pointer.js' ).then(() => {
+      	//-     Reveal.registerPlugin( RevealPointer )
+      	//- })
+      	
+      	if(document.querySelector(".diagram-data") != null)
+      	{
+      		const k = "../../backend/plugins/" + 'mermaid/mermaid.'
+      		loadScript( k + 'js' )
+      		loadStyle( k + 'css')
+      		loadScript( k + 'full.js' )
+      	}
+      
+      
+      	// default plugins
+      	loadScript( "../../backend/reveal.js-master/" + 'plugin/math/math.js' ).then(() => {
+      			Reveal.registerPlugin( RevealMath.KaTeX )
+      	})
+      
+      	if(document.querySelector("code") != null)
+      	{
+      		const k = "../../backend/reveal.js-master/" + 'plugin/highlight/'
+      		loadStyle(k + 'monokai.css')
+      		loadScript( k + '/highlight.js' ).then(() => {
+      			Reveal.registerPlugin( RevealHighlight )
+      		})
+      	}
+      	if(document.querySelector("aside") != null)
+      	{
+      		loadScript( "../../backend/reveal.js-master/" + 'plugin/markdown/markdown.js' ).then(() => {
+      			Reveal.registerPlugin( RevealMarkdown )
+      		})
+      
+      		loadScript( "../../backend/reveal.js-master/" + 'plugin/notes/notes.js' ).then(() => {
+      			Reveal.registerPlugin( RevealNotes )
+      		})
+      	}
+      }
+    </script>
+  </body>
+</html>

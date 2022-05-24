@@ -1,0 +1,61 @@
+extends ../../backend/_layout.jade
+
+block title
+	div Sports Analytics
+
+block content
+	section
+		h1 What?
+		.rs
+			img(data = "venn.svg")
+			img(data = "flowchart.svg")
+	section
+		h1 Time Series Data
+		img(data = "time_series.svg")
+	section
+		h1 Granger Causality
+		span $$y_t = a y_{t-1} + b x_{t-1}$$
+		ul.f Hypothesis test
+			li $H_0 : b = 0$
+			li $H_1 : b \ne 0$
+			li p-value
+			ul
+				li $p \le 0.05$ 
+					span ✅
+
+	section
+		section.cover(img="work.jpg")
+			h1 Practical Work
+		section(iframe="03.html")
+		//- section(iframe="01.html")
+		//- section(iframe="02.html")
+
+	section
+		h1 Future Work
+		ul.f Ideas
+			li Player Purchase
+			li Gini Index 
+				span - Diversity
+			li Judea Causal Model
+			li World Cup
+
+	section.cover(img = "applause.jpg")
+		h1 (applause)
+
+block appendix
+	section.cover(img="journey.jpg")
+		h1 Journey
+	section
+		h1 Sports
+		img(data = "sport360.jpg")
+	section
+		h1 Programming
+		iframe(data-src="assets/programming.html")
+	section
+		h1 Economics
+		ul
+			li Scarcity of resources
+			li Efficient outcomes
+			ul
+				li.f maximizing output
+				li.f minimizing costs

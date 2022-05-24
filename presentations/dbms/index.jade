@@ -1,0 +1,98 @@
+extends ../../backend/_layout.jade
+
+block title
+	div Resume Management
+
+block presenter
+	div Anmol, Anurag, Bharat, Ishan, Thahir
+
+block content
+	section
+		section.cover(img="intro.jpg")
+			h1 Introduction
+		section(img="kayal1.png")
+		section(img="kayal2.png")
+		section(img="kayal3.png")
+		section(img="beach.jpg")
+	section
+		section.cover(img="review.jpg")
+			h1 Discussion
+		section.full(img="graduation.jpg")
+		section(img="jameel.jpg")
+
+	section
+		section.cover(img="work.jpg")
+			h1 Implementation
+		section
+			h1 Implementation
+			table
+				thead
+					tr
+						th Purpose
+						th Tools
+				tbody
+					tr
+						td Front-End
+						td HTML, CSS 
+							span (Bootstrap)
+					tr
+						td Backend
+						td PHP
+					tr
+						td Querying Language
+						td mySQL
+					tr
+						td Xampp
+						td Local Hosting
+		section(img="landing_page.png")
+		section(img="er.svg")
+		section(img="er1.png")
+		section(img="er2.png")
+		section(img="er3.png")
+		section
+			h1 Normalization
+			ul
+				li 3NF
+				li Prevent accidental loss 
+					span of functional dependencies
+		section(img="schema.svg")
+		section
+			h1 RA, RC
+			ul
+				li RA 
+					span - Relational Algebra
+				li TRC 
+					span - Tuple Relational Calculus
+				li DRC 
+					span - Domain Relational Calculus
+		section
+			pre(data-id="code-animation")
+				code.hljs(data-trim data-line-numbers).
+					SELECT email 
+					FROM company 
+					WHERE email ='$email';
+			span.
+				$$
+				\pi_\text{email} \Big( \sigma_\text{email=‘\$email’} \text{(company)} \Big)
+				$$
+			span.
+				$$
+				\{
+					t | \exists c \in
+				\text{company(t[email]=c[email]} \land \\
+					\text{
+						c[email]=‘\$email’)
+						}
+				\}
+				$$
+			span.
+				$$
+				\{
+					\exists \text{ic,n,cn,c,st,ci,co,w,p,a,l,cd,ac(} \\
+					<\text{ic,n,cn,c,st,ci,co,w,e,p,a,l,cd,ac}> \in \\
+					\text{company} \land \text{e=‘\$email’}
+					)
+				\}
+				$$
+	section.cover(img="code.jpg")
+		h1 Demo
