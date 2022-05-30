@@ -39,14 +39,135 @@
           <div class="rs"><img data="venn.svg"><img data="flowchart.svg"></div>
         </section>
         <section>
-          <h1>Time Series Data</h1><img data="time_series.svg">
+          <h1>Types of Data</h1>
+          <ul>
+            <li>Cross-Sectional</li>
+            <li>Time Series</li>
+            <li>Panel</li>
+          </ul>
         </section>
+        <section>
+          <h1>Cross-Sectional</h1>
+          <table class="nf">
+            <thead>
+              <tr></tr>
+              <th>Year</th>
+              <th>Company</th>
+              <th>Revenue</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2015</td>
+                <td style="color: aqua">A</td>
+                <td>1K</td>
+              </tr>
+              <tr>
+                <td>2015</td>
+                <td style="color: aqua">B</td>
+                <td>2K</td>
+              </tr>
+              <tr>
+                <td>2015</td>
+                <td style="color: aqua">C</td>
+                <td>3K</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section>
+          <h1>Time Series</h1>
+          <table class="nf">
+            <thead>
+              <tr></tr>
+              <th>Year</th>
+              <th>Company</th>
+              <th>Revenue</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="color: orange">2015</td>
+                <td>A</td>
+                <td>1K</td>
+              </tr>
+              <tr>
+                <td style="color: orange">2016</td>
+                <td>A</td>
+                <td>2K</td>
+              </tr>
+              <tr>
+                <td style="color: orange">2017</td>
+                <td>A</td>
+                <td>3K</td>
+              </tr>
+              <tr>
+                <td style="color: orange">2018</td>
+                <td>A</td>
+                <td>3K</td>
+              </tr>
+              <tr>
+                <td style="color: orange">2019</td>
+                <td>A</td>
+                <td>3K</td>
+              </tr>
+              <tr>
+                <td style="color: orange">2020</td>
+                <td>A</td>
+                <td>3K</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section>
+          <h1>Panel</h1>
+          <table class="nf">
+            <thead>
+              <tr>
+                <th>Year</th>
+                <th>Company</th>
+                <th>Revenue</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="color: orange">2015</td>
+                <td style="color: aqua">A</td>
+                <td>1K</td>
+              </tr>
+              <tr>
+                <td style="color: orange">2015</td>
+                <td style="color: aqua">B</td>
+                <td>1K</td>
+              </tr>
+              <tr>
+                <td style="color: orange">2016</td>
+                <td style="color: aqua">B</td>
+                <td>2K</td>
+              </tr>
+              <tr>
+                <td style="color: orange">2017</td>
+                <td style="color: aqua">B</td>
+                <td>3K</td>
+              </tr>
+              <tr>
+                <td style="color: orange">2016</td>
+                <td style="color: aqua">C</td>
+                <td>2K</td>
+              </tr>
+              <tr>
+                <td style="color: orange">2017</td>
+                <td style="color: aqua">C</td>
+                <td>3K</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section img="time_series.svg"></section>
         <section>
           <h1>Granger Causality</h1><span>$$y_t = a y_{t-1} + b x_{t-1}$$</span>
           <ul class="f">Hypothesis test
             <li>$H_0 : b = 0$</li>
             <li>$H_1 : b \ne 0$</li>
-            <li>p-value</li>
+            <li>p-Value</li>
             <ul>
               <li>$p \le 0.05$ <span>✅</span></li>
             </ul>
@@ -59,11 +180,19 @@
           <section iframe="03.html"></section>
         </section>
         <section>
+          <h1>References</h1>
+          <ul>
+            <li class="nf">S. A. McLeod, “[What a p-value tells you about statistical significance],” 2019 ...</li>
+            <li class="nf">“Cristiano Ronaldo - Market value over time.” ...</li>
+            <li class="nf">W. McKinney, “Answer to ‘How to group pandas DataFrame entries by date in a non-unique column,’” ...</li>
+          </ul>
+        </section>
+        <section>
           <h1>Future Work</h1>
           <ul class="f">Ideas
             <li>Player Purchase</li>
             <li>Gini Index <span>- Diversity</span></li>
-            <li>Judea Causal Model</li>
+            <li>Judea Pearl Model</li>
             <li>World Cup</li>
           </ul>
         </section>
