@@ -89,7 +89,7 @@ section {
 .cover h1 {
   margin: 0 auto 0 auto;
   padding: 0.5em;
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: hsla(0deg, 0%, 0%, 0.75);
   border-radius: 0.2em;
 }
 
@@ -114,23 +114,23 @@ ul > th.fragmemt, ol > th.fragmemt, .eqn th.fragmemt, tr th.fragmemt {
   border: none !important;
 }
 ul > .fragment:not(th), ol > .fragment:not(th), .eqn .fragment:not(th), tr .fragment:not(th) {
-  color: rgba(255, 255, 255, 0.25);
+  color: hsla(0deg, 0%, 100%, 0.25);
 }
 ul > .fragment:not(th) mark, ol > .fragment:not(th) mark, .eqn .fragment:not(th) mark, tr .fragment:not(th) mark {
-  color: rgba(255, 255, 255, 0.25);
+  color: hsla(0deg, 0%, 100%, 0.25);
   padding: 0.1em;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: hsla(0deg, 0%, 0%, 0);
   -webkit-transition: background-color 0.5s ease;
   transition: background-color 0.5s ease;
 }
 
 .current-fragment {
-  color: white !important;
+  color: hsl(0deg, 0%, 100%) !important;
 }
 .current-fragment mark {
   font-weight: bold;
-  color: black !important;
-  background-color: yellow !important;
+  color: hsl(0deg, 0%, 0%) !important;
+  background-color: hsl(60deg, 100%, 50%) !important;
 }
 
 .diagram-display {
@@ -165,7 +165,8 @@ ul > .fragment:not(th) mark, ol > .fragment:not(th) mark, .eqn .fragment:not(th)
   -ms-interpolation-mode: nearest-neighbor;
 }
 
-iframe, .inverted {
+.inverted,
+iframe:not([src*=dark]) {
   -webkit-filter: saturate(200%) invert(1) contrast(85%) brightness(120%) hue-rotate(180deg) saturate(80%);
           filter: saturate(200%) invert(1) contrast(85%) brightness(120%) hue-rotate(180deg) saturate(80%);
 }
@@ -185,7 +186,6 @@ img, video {
   font-size: 0.8em;
   width: 100%;
   max-width: 100%;
-  border: 0.025em solid white;
 }
 .reveal table td {
   border: none;
@@ -199,4 +199,8 @@ img, video {
   max-height: 15em;
   position: absolute;
   top: 1em;
+}
+
+.str {
+  text-decoration: line-through;
 }

@@ -132,8 +132,10 @@ ul>, ol>, .eqn, tr
 	image-rendering: pixelated
 	-ms-interpolation-mode: nearest-neighbor
 
-iframe, .inverted
-	// dark theme
+.inverted,
+iframe:not([src*="dark"]) // ignore already dark
+	// [src^="dark"] means starts with dark
+	// iframe dark theme
 	filter: saturate(200%) invert(1) contrast(85%) brightness(120%) hue-rotate(180deg) saturate(80%)  // some keeda to create color contrast
 
 iframe // when using iframes as fragments
@@ -148,7 +150,7 @@ img, video
 	font-size: 0.8em
 	width: 100%
 	max-width: 100%
-	border: 0.025em solid white
+	// border: 0.025em solid white
 	// th // , td
 	// 	text-align: center
 	// tbody
@@ -169,3 +171,6 @@ img, video
 	top: 1em
 	// left: 2em
 	
+
+.str // .strike is reveal inbuilt
+	text-decoration: line-through

@@ -86,7 +86,7 @@ for (let i = 0; i < section.length; i++) {
         }
     }
 }
-const fragments = document.querySelectorAll("img:not(.fallback), video, iframe, li, span, .f, table, td:not(table.nf td), th:not(table.nf th)"
+const fragments = document.querySelectorAll("img:not(.fallback), video, iframe, li, span, .f, table, td:not(table.nf td), th:not(:first-child)"
 // even ul:not(ul ul) isn't ideal
 );
 for (let i = 0; i < fragments.length; i++) {
